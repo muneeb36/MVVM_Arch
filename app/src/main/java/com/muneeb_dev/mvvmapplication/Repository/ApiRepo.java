@@ -1,9 +1,18 @@
-package com.muneeb_dev.mvvmapplication;
+package com.muneeb_dev.mvvmapplication.Repository;
 
+import android.app.Activity;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.lifecycle.MutableLiveData;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.muneeb_dev.mvvmapplication.Models.User_DataList;
+import com.muneeb_dev.mvvmapplication.Models.User_List_Login;
+import com.muneeb_dev.mvvmapplication.Retrofit.ApiClient;
+import com.muneeb_dev.mvvmapplication.Retrofit.ApiService;
+
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -112,5 +121,35 @@ public class ApiRepo {
 
         return user_dataModelMutableLiveData;
     }
+
+
+
+    public MutableLiveData<List<User_List_Login>> getUserLogin(String Email , String Password, String deviceid  ) {
+
+        final MutableLiveData<List<User_List_Login>> login_mutabledata = new MutableLiveData<>();
+
+        ApiService apiService = ApiClient.getClient().create(ApiService.class);
+
+        apiService.Consumer_Login(Email ,Password ,deviceid).enqueue(new Callback<User_List_Login>() {
+            @Override
+            public void onResponse(Call<User_List_Login> call, Response<User_List_Login> response) {
+
+
+                login_mutabledata.setValue(Collections.singletonList(response.body()));
+
+
+            }
+
+            @Override
+            public void onFailure(Call<User_List_Login> call, Throwable t) {
+
+            }
+        });
+
+
+
+        return login_mutabledata;
+    }
+
 
 }

@@ -1,4 +1,4 @@
-package com.muneeb_dev.mvvmapplication;
+package com.muneeb_dev.mvvmapplication.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

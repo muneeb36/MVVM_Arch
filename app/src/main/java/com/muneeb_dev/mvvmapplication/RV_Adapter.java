@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.muneeb_dev.mvvmapplication.Models.User_DataList;
+
 import java.util.List;
 
 public class RV_Adapter extends RecyclerView.Adapter<RV_Adapter.RV_ViewHolder> {

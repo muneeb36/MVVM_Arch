@@ -1,11 +1,12 @@
-package com.muneeb_dev.mvvmapplication;
+package com.muneeb_dev.mvvmapplication.Retrofit;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static String BASE_URL ="https://jsonplaceholder.typicode.com/";
+//    public static String BASE_URL ="https://jsonplaceholder.typicode.com/";
+    public static String BASE_URL ="http://cablefor.wwwmi3-ls7.a2hosted.com/dev/postquamv3/";
 
     private static Retrofit retrofit ;
 
