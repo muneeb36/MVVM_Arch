@@ -9,6 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
         >
 
 <!--        <androidx.recyclerview.widget.RecyclerView-->
@@ -18,7 +20,22 @@
 <!--            />-->
 
 
+        <TextView
+            android:id="@+id/Tv_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
 
+        <TextView
+            android:id="@+id/Tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            />
 
     </LinearLayout>
 

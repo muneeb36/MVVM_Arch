@@ -43,6 +43,9 @@ public class User_Data_Model {
     @Expose
     private List<UserAddress> addresses = null;
 
+    public User_Data_Model() {
+    }
+
     public List<UserAddress> getAddresses() {
         return addresses;
     }

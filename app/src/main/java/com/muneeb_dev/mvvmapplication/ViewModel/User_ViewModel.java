@@ -17,7 +17,7 @@ public class User_ViewModel extends ViewModel {
     ApiRepo apiRepo;
 
     MutableLiveData<List<User_DataList>> getuser;
-    MutableLiveData<List<User_List_Login>> userLogin;
+    MutableLiveData<User_List_Login> userLogin;
 
     public User_ViewModel()
      {
@@ -35,7 +35,7 @@ public class User_ViewModel extends ViewModel {
         return getuser;
      }
 
-    public LiveData<List<User_List_Login>> userLogin(Activity activity,String Email , String Password, String deviceid){
+    public LiveData<User_List_Login> userLogin(Activity activity,String Email , String Password, String deviceid){
 
         if(userLogin == null)
         {

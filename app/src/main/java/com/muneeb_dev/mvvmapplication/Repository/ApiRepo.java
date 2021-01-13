@@ -124,9 +124,9 @@ public class ApiRepo {
 
 
 
-    public MutableLiveData<List<User_List_Login>> getUserLogin(String Email , String Password, String deviceid  ) {
+    public MutableLiveData<User_List_Login> getUserLogin(String Email , String Password, String deviceid  ) {
 
-        final MutableLiveData<List<User_List_Login>> login_mutabledata = new MutableLiveData<>();
+        final MutableLiveData<User_List_Login> login_mutabledata = new MutableLiveData<>();
 
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
 
@@ -135,7 +135,7 @@ public class ApiRepo {
             public void onResponse(Call<User_List_Login> call, Response<User_List_Login> response) {
 
 
-                login_mutabledata.setValue(Collections.singletonList(response.body()));
+                login_mutabledata.setValue(response.body());
 
 
             }
